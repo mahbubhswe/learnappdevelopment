@@ -42,8 +42,8 @@ function Home() {
       <Stack
         spacing={1}
         direction={{
-          xs: "column-reverse",
-          sm: "column-reverse",
+          xs: "column",
+          sm: "column",
           md: "row",
           lg: "row",
           xl: "row",
@@ -59,19 +59,28 @@ function Home() {
               lg: "500px",
               sl: "500px",
             },
+            marginTop: { xs: "60px",sm:"40px",md:"0px" },
             display: "grid",
             placeContent: "center",
           }}
         >
           <Typography
-            sx={{ paddingY: "3px", color: "#3399FF", fontWeight: 900 }}
+            sx={{
+              paddingY: "3px",
+              color: "#3399FF",
+              fontWeight: { xs: 700, sm: 900 },
+            }}
             variant="h3"
             align="center"
           >
             Learn With
           </Typography>
           <Typography
-            sx={{ paddingY: "3px", color: "#001e3c", fontWeight: 900 }}
+            sx={{
+              paddingY: "3px",
+              color: "#001e3c",
+              fontWeight: { xs: 700, sm: 900 },
+            }}
             variant="h3"
             align="center"
           >
@@ -208,13 +217,13 @@ function Home() {
           >
             <Typography component={"p"} align="center" sx={{ padding: "10px" }}>
               <p>Hi,</p>
-              {`I'm`} Mahbub Hasan (Software Engineer). I am very much interested to
-              share my programming and development knowledge with the people.
+              {`I'm`} Mahbub Hasan (Software Engineer). I am very much
+              interested to share my programming and development knowledge with
+              the people.
             </Typography>
           </Box>
         </Stack>
       </div>
-      <Dialog></Dialog>
     </>
   );
 }

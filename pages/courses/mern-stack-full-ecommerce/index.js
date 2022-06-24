@@ -49,7 +49,7 @@ export default function index() {
               align="center"
               sx={{ fontWeight: 700, padding: "3px" }}
             >
-              You will learn(আমি যা শিখাব)
+              You will learn(যা শিখানো হবে)
             </Typography>
             <Divider></Divider>
             <List>
@@ -58,6 +58,9 @@ export default function index() {
               </ListItem>
               <ListItem>
                 <ListItemText>Node JS</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>Express JS</ListItemText>
               </ListItem>
               <ListItem>
                 <ListItemText>React JS</ListItemText>

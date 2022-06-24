@@ -7,6 +7,11 @@ import {
   Toolbar,
   AppBar,
   Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
 } from "@mui/material";
 import React, { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
@@ -19,7 +24,14 @@ export default function Navbar() {
 
   return (
     <>
-      <AppBar position="sticky" sx={{ boxShadow: "none" }}>
+      <AppBar
+        position="sticky"
+        sx={{
+          boxShadow: "none",
+          background: "black",
+          borderBottom: "2px solid #53C3C7",
+        }}
+      >
         <Toolbar>
           <Typography
             flexGrow={{ xs: 1, sm: 1, md: 0.7, lg: 0.7, xl: 0.7 }}
@@ -51,9 +63,10 @@ export default function Navbar() {
               </Button>
             ))}
           </Stack>
+
           <Button
             onClick={() => setShow(true)}
-            color="navBarBtn"
+            type="button"
             sx={{
               display: {
                 xs: "block",
@@ -62,45 +75,46 @@ export default function Navbar() {
                 lg: "none",
                 xl: "none",
               },
+              height: "100%",
+              lineHeight:"100%",
+              border: "1px solid gray",
             }}
           >
             <MenuOutlinedIcon />
           </Button>
         </Toolbar>
       </AppBar>
-      <Drawer
-        variant="outlined"
-        open={show}
-        anchor="top"
-        onClose={() => setShow(false)}
-      >
-        <Stack sx={{ padding: "30px  10px 5px 10px" }} spacing={1}>
-          {navItems.map((item) => (
-            <Button
-              onClick={() => router.push(item.link)}
-              key={item.id}
-              color="navBarBtn"
-              sx={{ fontSize: "18px", fontWeight: "900"}}
-              startIcon={<item.icon />}
-            >
-              {item.title}
-            </Button>
-          ))}
-
+      <Drawer variant="outlined" open={show} onClose={() => setShow(false)}>
+        <Stack sx={{ padding: "20px", width: "100vw" }} spacing={1}>
           <Button
             onClick={() => setShow(false)}
             type="button"
             sx={{
               width: "5px",
-              marginX:"auto",
-              background: "#f1c903",
-              "&:hover": {
-                background: "black",
-              },
+              marginLeft: "auto",
+              color: "black",
+              border: "1px dotted #ccc",
+              // "&:hover": {
+              //   background: "black",
+              // },
             }}
           >
             <CloseIcon></CloseIcon>
           </Button>
+          <List>
+            {navItems.map((item) => (
+              <ListItem
+                key={item.id}
+                color="navBarBtn"
+                sx={{ fontSize: "18px", fontWeight: "900" }}
+              >
+                <ListItemButton onClick={() => router.push(item.link)}>
+                  <ListItemIcon>{<item.icon />}</ListItemIcon>
+                  <ListItemText> {item.title}</ListItemText>
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
         </Stack>
       </Drawer>
     </>

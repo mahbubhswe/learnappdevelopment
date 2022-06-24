@@ -14,7 +14,7 @@ const theme = createTheme({
       main: red.A400,
     },
     navBarBtn: {
-      main: "#808080",
+      main: "#FEFEFE",
     },
   },
 });
