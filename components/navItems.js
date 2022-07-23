@@ -18,7 +18,7 @@ export const navItems = [
   {
     id: 3,
     title: "Facebook",
-    link: "https://www.facebook.com/programmingwithmahbub",
+    link: "https://web.facebook.com/learnappdevelopmenthere",
     icon: FacebookIcon,
   },
   {
