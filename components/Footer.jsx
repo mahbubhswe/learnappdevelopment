@@ -9,7 +9,7 @@ export default function Footer() {
       <Divider></Divider>
       <Typography
         sx={{ textAlign: "center", paddingY: "20px" }}
-      >{`© Programming with Mahbub ${currentYear}`}</Typography>
+      >{`© Learn App Development ${currentYear}`}</Typography>
     </div>
   );
 }
