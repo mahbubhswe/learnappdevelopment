@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = yaer.getFullYear();
   return (
     <div style={{ marginTop: "200px", backgroundColor: "#EDEDED" }}>
-      <Divider></Divider>
+      <Divider>hi</Divider>
       <Typography
         sx={{ textAlign: "center", paddingY: "20px" }}
       >{`© Learn App Development ${currentYear}`}</Typography>
